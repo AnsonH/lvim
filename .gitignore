@@ -1,0 +1,6 @@
+# System files
+.DS_Store
+.directory
+
+# Packer
+plugin/packer_compiled.lua
