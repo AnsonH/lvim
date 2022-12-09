@@ -3,6 +3,8 @@
 - Linters should be filled in as strings with either a global executable or a path to an executable
 ]]
 
+reload "user.autocommands"
+reload "user.builtin"
 reload "user.keymaps"
 
 -- general
@@ -14,116 +16,14 @@ lvim.format_on_save.enabled = false
 -- lvim.colorscheme = "lunar"
 lvim.colorscheme = "sonokai"
 vim.g.sonokai_style = "shusia"
+vim.g.sonokai_disable_italic_comment = 1
 
 -- Neovide GUI
 vim.opt.guifont = "FiraCode NF:h11"   -- for Neovide GUI
 vim.g.neovide_cursor_animation_length = 0
 vim.g.neovide_refresh_rate = 75
 
--- telescope
-local _, actions = pcall(require, "telescope.actions")
-lvim.builtin.telescope.defaults.mappings = {
-  -- input mode
-  i = {
-    ["<Esc>"] = actions.close,
-    ["<C-j>"] = actions.move_selection_next,
-    ["<C-k>"] = actions.move_selection_previous,
-    ["<Down>"] = actions.cycle_history_next,
-    ["<Up>"] = actions.cycle_history_prev,
-  },
-  -- normal mode
-  n = {
-    ["<C-j>"] = actions.move_selection_next,
-    ["<C-k>"] = actions.move_selection_previous,
-  },
-}
-
--- Change theme settings
--- lvim.builtin.theme.options.dim_inactive = true
--- lvim.builtin.theme.options.style = "storm"
-
--- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
--- }
-
--- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
-lvim.builtin.nvimtree.setup.renderer.group_empty = true
-
--- Autocompletes for command
-lvim.builtin.cmp.cmdline.enable = true
-lvim.builtin.cmp.cmdline.options[1].sources = {
-  { name = "path" },
-  {
-    name = "cmdline",
-    option = {
-      ignore_cmds = { 'Man', '!' }
-    }
-  }
-}
-
--- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "comment",  -- Highlights for TODO, NOTE, ...
-  "cpp",
-  "css",
-  "dart",
-  "dockerfile",
-  "graphql",
-  "html",
-  "http",
-  "java",
-  "javascript",
-  "jsdoc",
-  "json",
-  "json5",
-  "jsonc",
-  "kotlin",
-  "lua",
-  "markdown",
-  "php",
-  "python",
-  "regex",
-  "scss",
-  "tsx",
-  "typescript",
-  "vim",
-  "yaml",
-}
-
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enable = true
-
 -- generic LSP settings
-
--- -- make sure server will always be installed even if the server is in skipped_servers list
--- lvim.lsp.installer.setup.ensure_installed = {
---     "sumneko_lua",
---     "jsonls",
--- }
--- -- change UI setting of `LspInstallInfo`
--- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
--- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
--- lvim.lsp.installer.setup.ui.border = "rounded"
--- lvim.lsp.installer.setup.ui.keymaps = {
---     uninstall_server = "d",
---     toggle_server_expand = "o",
--- }
 
 -- ---@usage disable automatic installation of servers
 -- lvim.lsp.installer.setup.automatic_installation = false
