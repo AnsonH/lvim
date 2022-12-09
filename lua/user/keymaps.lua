@@ -4,6 +4,8 @@
   - https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/core/which-key.lua
 --]]
 
+local which_key = lvim.builtin.which_key
+
 lvim.leader = "space"
 
 -- unmap a default keymapping
@@ -30,24 +32,27 @@ lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-Left>"] = ":BufferLineMovePrev<CR>"
 lvim.keys.normal_mode["<S-Right>"] = ":BufferLineMoveNext<CR>"
-lvim.keys.normal_mode["Q"] = ":Bdelete<CR>"
+lvim.keys.normal_mode["Q"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<C-q>"] = "<C-w>q"
 
 -- LSP
 -- TODO: Better whichkey message (Note: Editing lvim.lsp.buffer_mappings.normal_mode will cause error)
 lvim.keys.normal_mode["gh"] = { ":lua vim.lsp.buf.hover()<CR>" }
 
--- Actions without yanking
-lvim.keys.normal_mode["x"] = '"_x'
+-- Leader
+which_key.mappings["f"] = { ":lua require'telescope.builtin'.live_grep(telescope_expanded_dropdown())<CR>", "Live Grep" }
 
 -- Misc
 lvim.keys.normal_mode["<Esc>"] = ":noh<CR>"
+lvim.keys.normal_mode["x"] = '"_x'  -- Without yank
 
 -- Remove default whichkey bindings
-lvim.builtin.which_key.mappings["f"] = {}     -- Find file
-lvim.builtin.which_key.mappings["h"] = {}     -- :noh
-lvim.builtin.which_key.mappings["w"] = {}     -- Save
-lvim.builtin.which_key.mappings["/"] = {}     -- Toggle line comment
+which_key.mappings["c"] = {}     -- Close buffer
+which_key.mappings["h"] = {}     -- :noh
+which_key.mappings["w"] = {}     -- Save
+which_key.mappings["/"] = {}     -- Toggle line comment
+which_key.mappings["s"]["f"] = nil    -- Find file
+which_key.mappings["s"]["t"] = nil    -- Live grep
 
 --------------------------------------------------------
 ------------------------ INSERT ------------------------

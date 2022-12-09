@@ -9,6 +9,7 @@ reload "user.keymaps"
 
 -- general
 vim.opt.relativenumber = true
+vim.opt.timeoutlen = 600        -- time in ms for a mapped sequence to complete
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 
@@ -19,7 +20,7 @@ vim.g.sonokai_style = "shusia"
 vim.g.sonokai_disable_italic_comment = 1
 
 -- Neovide GUI
-vim.opt.guifont = "FiraCode NF:h11"   -- for Neovide GUI
+vim.opt.guifont = "FiraCode NF:h11"
 vim.g.neovide_cursor_animation_length = 0
 vim.g.neovide_refresh_rate = 75
 
@@ -86,9 +87,6 @@ vim.g.neovide_refresh_rate = 75
 
 -- Additional Plugins
 lvim.plugins = {
-  --[[ General ]]--
-  { "moll/vim-bbye" },
-
   --[[ Syntax highlighting ]]--
   { "sainnhe/sonokai" },
   {

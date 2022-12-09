@@ -45,6 +45,25 @@ telescope.defaults.mappings = {
     ["<C-k>"] = actions.move_selection_previous,
   },
 }
+-- Custom telescope theme
+_G.telescope_expanded_dropdown = function(height)
+  local menu_height = height or 20
+
+  return {
+    layout_strategy = "center", -- See ":h telescope.layout" -> Scroll to "layout_strategies.center()"
+    layout_config = {
+      preview_cutoff = 1, -- Preview should always show (unless previewer = false)
+      width = 0.88,
+      height = menu_height, -- No. of rows for Prompt + Results
+    },
+    results_title = false,
+    borderchars = {
+      prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
+      results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
+      preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    },
+  }
+end
 -- }}}
 
 -- {{{ Treesitter
@@ -78,4 +97,18 @@ treesitter.ensure_installed = {
   "vim",
   "yaml",
 }
+-- }}}
+
+-- WhichKey {{{
+-- NOTE: whichkey keybindings are found in 'keymaps.lua'
+local which_key = lvim.builtin.which_key
+which_key.setup.icons.group = ""
+which_key.mappings.b.name = "﬘ Buffers"
+which_key.mappings.d.name = " Debug"
+which_key.mappings.g.name = " Git"
+which_key.mappings.l.name = " LSP"
+which_key.mappings.L.name = " LunarVim"
+which_key.mappings.p.name = " Packer"
+which_key.mappings.s.name = " Search"
+which_key.mappings.T.name = " Treesitter"
 -- }}}
