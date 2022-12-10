@@ -37,7 +37,9 @@ lvim.keys.normal_mode["<C-q>"] = "<C-w>q"
 
 -- LSP
 -- TODO: Better whichkey message (Note: Editing lvim.lsp.buffer_mappings.normal_mode will cause error)
+lvim.keys.normal_mode["<F2>"] = { ":lua vim.lsp.buf.rename()<CR>" }
 lvim.keys.normal_mode["gh"] = { ":lua vim.lsp.buf.hover()<CR>" }
+which_key.mappings["l"]["c"] = { ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", "Copilot Toggle Inline" }
 
 -- Leader
 which_key.mappings["f"] = { ":lua require'telescope.builtin'.live_grep(telescope_expanded_dropdown())<CR>", "Live Grep" }
@@ -51,6 +53,7 @@ which_key.mappings["c"] = {}     -- Close buffer
 which_key.mappings["h"] = {}     -- :noh
 which_key.mappings["w"] = {}     -- Save
 which_key.mappings["/"] = {}     -- Toggle line comment
+which_key.mappings["l"]["r"] = nil    -- Rename symbol
 which_key.mappings["s"]["f"] = nil    -- Find file
 which_key.mappings["s"]["t"] = nil    -- Live grep
 

@@ -6,6 +6,7 @@
 reload "user.autocommands"
 reload "user.builtin"
 reload "user.keymaps"
+reload "user.plugins"
 
 -- general
 vim.opt.relativenumber = true
@@ -25,9 +26,6 @@ vim.g.neovide_cursor_animation_length = 0
 vim.g.neovide_refresh_rate = 75
 
 -- generic LSP settings
-
--- ---@usage disable automatic installation of servers
--- lvim.lsp.installer.setup.automatic_installation = false
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
@@ -51,8 +49,12 @@ vim.g.neovide_refresh_rate = 75
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
--- local formatters = require "lvim.lsp.null-ls.formatters"
+-- set a formatter, this will override the language server formatting capabilities (if it exists)
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "prettier", },
+}
+
 -- formatters.setup {
 --   { command = "black", filetypes = { "python" } },
 --   { command = "isort", filetypes = { "python" } },
@@ -84,42 +86,3 @@ vim.g.neovide_refresh_rate = 75
 --     filetypes = { "javascript", "python" },
 --   },
 -- }
-
--- Additional Plugins
-lvim.plugins = {
-  --[[ Syntax highlighting ]]--
-  { "sainnhe/sonokai" },
-  {
-    "norcalli/nvim-colorizer.lua",  -- Highlight color codes
-    config = function()
-      require("colorizer").setup({ "*" }, { names = false })
-    end,
-  },
-
-  --[[ Productivity ]]--
-  { "hrsh7th/cmp-cmdline" },        -- cmd-line autocompletes
-  {
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-      require("nvim-surround").setup()
-    end,
-  },
-  {
-    "windwp/nvim-ts-autotag",       -- Autoclose and autorename HTML tags
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
-
-  --[[ Aesthetics ]]--
-  {
-    "dstein64/nvim-scrollview",     -- scroll bar
-    config = function()
-      require("scrollview").setup({
-        hide_on_intersect = false
-      })
-    end
-  }
-}
-
