@@ -42,7 +42,7 @@ lvim.keys.normal_mode["gh"] = { ":lua vim.lsp.buf.hover()<CR>" }
 which_key.mappings["l"]["c"] = { ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", "Copilot Toggle Inline" }
 
 -- Leader
-which_key.mappings["f"] = { ":lua require'telescope.builtin'.live_grep(telescope_expanded_dropdown())<CR>", "Live Grep" }
+which_key.mappings["f"] = { ":lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy())<CR>", "Live Grep" }
 
 -- Misc
 lvim.keys.normal_mode["<Esc>"] = ":noh<CR>"

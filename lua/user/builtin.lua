@@ -16,6 +16,14 @@ cmp.cmdline.options[1].sources = {
 }
 -- }}}
 
+-- Lualine {{{
+local lualine = lvim.builtin.lualine
+local lualine_components = require("lvim.core.lualine.components")
+lualine.sections.lualine_c = {
+  lualine_components.python_env,
+}
+-- }}}
+
 -- NvimTree {{{
 local nvimtree = lvim.builtin.nvimtree
 nvimtree.setup.view.side = "left"
@@ -45,25 +53,6 @@ telescope.defaults.mappings = {
     ["<C-k>"] = actions.move_selection_previous,
   },
 }
--- Custom telescope theme
-_G.telescope_expanded_dropdown = function(height)
-  local menu_height = height or 20
-
-  return {
-    layout_strategy = "center", -- See ":h telescope.layout" -> Scroll to "layout_strategies.center()"
-    layout_config = {
-      preview_cutoff = 1, -- Preview should always show (unless previewer = false)
-      width = 0.88,
-      height = menu_height, -- No. of rows for Prompt + Results
-    },
-    results_title = false,
-    borderchars = {
-      prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
-      results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
-      preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-    },
-  }
-end
 -- }}}
 
 -- {{{ Treesitter

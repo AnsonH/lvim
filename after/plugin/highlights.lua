@@ -25,7 +25,7 @@ if vim.g.colors_name == "sonokai" then
     "CursorLine guibg=#3b383e",
     "DiffChange guibg=#5d433b",
     "IndentBlanklineChar guifg=#423f46",  -- indentation guide
-    "LineNr guifg=#67676D",
+    "LineNr guifg=#727072",
     "ScrollView guibg=#67676D",           -- Scroll bar
     "Visual guibg=#455a60",
 
@@ -41,7 +41,7 @@ if vim.g.colors_name == "sonokai" then
     "@constructor guifg=#7accd7",
     "@parameter guifg=#ef9062",
     "@text guifg=#e3e1e4",                -- HTML tag inner text
-    "@tag.delimiter guifg=#848089",       -- HTML tag symbol ("<" & ">")
+    "@tag.delimiter guifg=#727072",       -- HTML tag symbol ("<" & ">")
     "@tag guifg=#f85e84",                 -- HTML tag name
     "@tag.attribute guifg=#7accd7",       -- HTML tag attribute
 
