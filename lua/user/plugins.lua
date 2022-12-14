@@ -25,6 +25,10 @@ lvim.plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "sindrets/diffview.nvim", -- VS Code like diff view
+    requires = "nvim-lua/plenary.nvim",
+  },
 
   --[[ GitHub Copilot ]] --
   {
