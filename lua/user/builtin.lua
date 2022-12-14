@@ -19,6 +19,32 @@ cmp.cmdline.options[1].sources = {
 -- Lualine {{{
 local lualine = lvim.builtin.lualine
 local lualine_components = require("lvim.core.lualine.components")
+lualine.sections.lualine_a = {
+  {
+    function()
+      local mode = require("lualine.utils.mode").get_mode()
+      local map = {
+        ["NORMAL"] = lvim.icons.ui.Target,
+        ["INSERT"] = lvim.icons.ui.Pencil,
+        ["REPLACE"] = "累",
+        ["V-REPLACE"] = "累",
+        ["VISUAL"] = "",
+        ["V-LINE"] = "L",
+        ["V-BLOCK"] = "B",
+        ["SELECT"] = "S",
+        ["S-LINE"] = "SL",
+        ["COMMAND"] = ":",
+        ["EX"] = "EX",
+        ["MORE"] = lvim.icons.ui.Ellipsis,
+        ["CONFIRM"] = lvim.icons.diagnostics.BoldQuestion,
+        ["O-PENDING"] = "OP",
+        ["SHELL"] = "ﲵ",
+        ["TERMINAL"] = "",
+      }
+      return map[mode]
+    end,
+  },
+}
 lualine.sections.lualine_c = {
   lualine_components.python_env,
 }
