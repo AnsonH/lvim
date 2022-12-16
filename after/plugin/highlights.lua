@@ -59,6 +59,7 @@ if vim.g.colors_name == "sonokai" then
     "NvimTreeFolderIcon guifg=#e5c463",
     "NvimTreeFolderName guifg=#c1c0c0",
     "NvimTreeEmptyFolderName guifg=#c1c0c0",
+    "NvimTreeIndentMarker guifg=#5b595c",
     "NvimTreeOpenedFolderName guifg=#c1c0c0",
   }
 end
