@@ -58,7 +58,6 @@ nvimtree.setup.view.mappings.list = {
   { key = "?", action = "toggle_help" },
 }
 nvimtree.setup.renderer.icons.show.git = true
-nvimtree.setup.renderer.indent_markers.enable = true
 nvimtree.setup.renderer.group_empty = true
 -- }}}
 
