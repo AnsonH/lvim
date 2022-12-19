@@ -35,20 +35,18 @@ lvim.plugins = {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
-          suggestion = {
-            auto_trigger = true,
-            keymap = {
-              accept = "<M-l>", -- Alt+l to accept suggestion
-              next = "<M-]>",
-              prev = "<M-[>",
-              dismiss = "<C-]>",
-            },
+      require("copilot").setup {
+        plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+        suggestion = {
+          auto_trigger = true,
+          keymap = {
+            accept = "<M-l>", -- Alt+l to accept suggestion
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
           },
-        }
-      end, 100)
+        },
+      }
     end,
   },
   {
