@@ -6,6 +6,11 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "prettier", },
 }
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "eslint_d", },
+}
 -- }}}
 
 ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
