@@ -1,7 +1,8 @@
+-- vim:foldmethod=marker
 --- Plugins: https://www.lunarvim.org/docs/plugins
 
 lvim.plugins = {
-  --[[ Syntax highlighting ]] --
+  -- Syntax highlighting {{{
   { "sainnhe/sonokai" },
   {
     "norcalli/nvim-colorizer.lua", -- Highlight color codes
@@ -9,8 +10,9 @@ lvim.plugins = {
       require("colorizer").setup({ "*" }, { names = false })
     end,
   },
+  --}}}
 
-  --[[ Productivity ]] --
+  -- Productivity {{{
   { "hrsh7th/cmp-cmdline" }, -- cmd-line autocompletes
   {
     "kylechui/nvim-surround",
@@ -29,8 +31,9 @@ lvim.plugins = {
     "sindrets/diffview.nvim", -- VS Code like diff view
     requires = "nvim-lua/plenary.nvim",
   },
+  -- }}}
 
-  --[[ GitHub Copilot ]] --
+  -- GitHub Copilot {{{
   {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
@@ -56,8 +59,9 @@ lvim.plugins = {
       require("copilot_cmp").setup()
     end
   },
+  -- }}}
 
-  --[[ Aesthetics ]] --
+  -- Aesthetics {{{
   {
     "dstein64/nvim-scrollview", -- scroll bar
     config = function()
@@ -65,5 +69,13 @@ lvim.plugins = {
         hide_on_intersect = false
       })
     end
+  },
+  -- }}}
+
+  -- Misc {{{
+  {
+    "nvim-treesitter/playground", -- Treesitter playground
+    event = "BufRead",
   }
+  -- }}}
 }

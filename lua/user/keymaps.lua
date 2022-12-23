@@ -58,6 +58,9 @@ which_key.mappings["/"] = {}     -- ✕ Toggle line comment
 which_key.mappings["s"]["f"] = nil    -- ✕ Find file
 which_key.mappings["s"]["t"] = nil    -- ✕ Live grep
 
+-- Treesitter
+which_key.mappings["T"]["i"] = { ":TSHighlightCapturesUnderCursor<CR>", "Info" }
+
 -- Misc
 lvim.keys.normal_mode["<Esc>"] = ":noh<CR>"
 lvim.keys.normal_mode["x"] = '"_x'  -- ✕ Without yank
