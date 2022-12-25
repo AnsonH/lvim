@@ -31,6 +31,11 @@ lvim.plugins = {
   {
     "sindrets/diffview.nvim", -- VS Code like diff view
     requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("diffview").setup({
+        enhanced_diff_hl = true,
+      })
+    end,
   },
   -- }}}
 

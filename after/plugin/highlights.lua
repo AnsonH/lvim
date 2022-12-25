@@ -57,6 +57,7 @@ if vim.g.colors_name == "sonokai" then
     -- Git
     GitSignsChange = { fg = sonokai.orange },
     GitSignsChangeNr = { fg = sonokai.orange },
+    DiffviewDiffDelete = { fg = sonokai.bg4 }, -- Diff char in diffview
 
     -- nvim-navic (LSP breadcrumb)
     NavicIconsFile = { fg = sonokai.green },
