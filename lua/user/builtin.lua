@@ -1,6 +1,6 @@
 -- vim:foldmethod=marker
 
--- {{{ Cmp
+-- Cmp {{{
 local cmp = lvim.builtin.cmp
 
 -- Command autocomplete
@@ -81,8 +81,10 @@ telescope.defaults.mappings = {
 }
 -- }}}
 
--- {{{ Treesitter
+-- Treesitter {{{
 local treesitter = lvim.builtin.treesitter
+treesitter.rainbow.enable = true
+treesitter.rainbow.extended_mode = false
 treesitter.ensure_installed = {
   "bash",
   "c",

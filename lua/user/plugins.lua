@@ -10,6 +10,7 @@ lvim.plugins = {
       require("colorizer").setup({ "*" }, { names = false })
     end,
   },
+  { "p00f/nvim-ts-rainbow" }, -- Rainbow parentheses
   --}}}
 
   -- Productivity {{{
@@ -76,6 +77,7 @@ lvim.plugins = {
   {
     "nvim-treesitter/playground", -- Treesitter playground
     event = "BufRead",
-  }
+  },
+  { "wakatime/vim-wakatime" }  -- Wakatime
   -- }}}
 }
