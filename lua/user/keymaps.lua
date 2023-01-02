@@ -63,9 +63,11 @@ which_key.mappings["T"]["i"] = { ":TSHighlightCapturesUnderCursor<CR>", "Info" }
 
 -- Misc
 lvim.keys.normal_mode["<Esc>"] = ":noh<CR>"
-lvim.keys.normal_mode["x"] = '"_x'  -- ✕ Without yank
-lvim.keys.normal_mode["zO"] = "zR"  -- ✕ Open all folds
-lvim.keys.normal_mode["zC"] = "zM"  -- ✕ Close all folds
+lvim.keys.normal_mode["x"] = '"_x'  -- Without yank
+lvim.keys.normal_mode["zO"] = "zR"  -- Open all folds
+lvim.keys.normal_mode["zC"] = "zM"  -- Close all folds
+lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"  -- Center after scroll
+lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 
 -- }}}
 

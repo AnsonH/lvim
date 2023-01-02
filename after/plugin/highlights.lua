@@ -43,10 +43,11 @@ if vim.g.colors_name == "sonokai" then
     ["@constant"] = { fg = sonokai.purple },
     ["@constructor"] = { fg = sonokai.blue },
     ["@parameter"] = { fg = sonokai.orange },
+    ["@property"] = { fg = sonokai.fg },
     ["@text"] = { fg = sonokai.fg }, -- HTML tag inner text
     ["@tag.delimiter"] = { fg = sonokai.grey }, -- HTML tag symbol ("<" & ">")
     ["@tag"] = { fg = sonokai.red }, -- HTML tag name
-    ["@tag.attribute"] = { fg = sonokai.blue }, -- HTML tag attribute
+    ["@tag.attribute"] = { fg = sonokai.blue, italic = true }, -- HTML tag attribute
 
     -- Diagnostics
     DiagnosticVirtualTextError = { fg = sonokai.red, bg = "#422f36" },
