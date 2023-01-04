@@ -44,7 +44,20 @@ which_key.mappings["g"]["o"] = nil    -- ✕ Diff view of all files w/ Telescope
 -- LSP
 lvim.keys.normal_mode["<F2>"] = { ":lua vim.lsp.buf.rename()<CR>" }
 lvim.lsp.buffer_mappings.normal_mode['gh'] = { vim.lsp.buf.hover, "Show documentation" }
+lvim.lsp.buffer_mappings.normal_mode['gq'] = {
+  ":Lspsaga code_action<CR>",
+  "Code action",
+}
+lvim.lsp.buffer_mappings.normal_mode['gr'] = {
+  ":Lspsaga lsp_finder<CR>",
+  "Go to references",
+}
+lvim.lsp.buffer_mappings.normal_mode['gpd'] = {
+  ":Lspsaga peek_definition<CR>",
+  "Peek definition"
+}
 which_key.mappings["l"]["c"] = { ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", "Copilot Toggle Inline" }
+which_key.mappings["l"]["a"] = nil    -- ✕ Code actions
 which_key.mappings["l"]["r"] = nil    -- ✕ Rename symbol
 
 -- Leader

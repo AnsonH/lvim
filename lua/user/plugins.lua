@@ -37,6 +37,16 @@ lvim.plugins = {
       })
     end,
   },
+  {
+    "glepnir/lspsaga.nvim", -- LSP UI
+    branch = "main",
+    config = function()
+      require("lspsaga").init_lsp_saga({
+        -- FIXME: These are not overriding the default options
+        max_preview_lines = 15,
+      })
+    end,
+  },
   -- }}}
 
   -- GitHub Copilot {{{
@@ -83,6 +93,6 @@ lvim.plugins = {
     "nvim-treesitter/playground", -- Treesitter playground
     event = "BufRead",
   },
-  { "wakatime/vim-wakatime" }  -- Wakatime
+  { "wakatime/vim-wakatime" } -- Wakatime
   -- }}}
 }

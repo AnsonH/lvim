@@ -1,6 +1,6 @@
 -- vim:foldmethod=marker
 
--- {{{ Formatters & Linters
+-- Formatters & Linters {{{ 
 -- https://www.lunarvim.org/docs/languages#lintingformatting
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
