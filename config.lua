@@ -21,7 +21,7 @@ lvim.format_on_save.enabled = false
 lvim.colorscheme = "sonokai"
 vim.g.sonokai_style = "shusia"
 
--- Neovide GUI
-vim.opt.guifont = "FiraCode NF:h11"
+-- Neovide GUI (on Windows)
+vim.opt.guifont = "JetBrainsMono NF:h10"
 vim.g.neovide_cursor_animation_length = 0
 vim.g.neovide_refresh_rate = 75
