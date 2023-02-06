@@ -5,6 +5,7 @@ local cmp = lvim.builtin.cmp
 
 -- Command autocomplete
 cmp.cmdline.enable = true
+-- TODO: Remove the following in stable release 1.2
 cmp.cmdline.options[1].sources = {
   { name = "path" },
   {
@@ -13,6 +14,11 @@ cmp.cmdline.options[1].sources = {
       ignore_cmds = { 'Man', '!' }
     }
   }
+}
+
+-- Tailwind CSS colors
+cmp.formatting = {
+  format = require("tailwindcss-colorizer-cmp").formatter
 }
 -- }}}
 

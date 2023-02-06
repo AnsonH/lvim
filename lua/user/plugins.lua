@@ -5,16 +5,42 @@ lvim.plugins = {
   -- Syntax highlighting {{{
   { "sainnhe/sonokai" },
   {
-    "norcalli/nvim-colorizer.lua", -- Highlight color codes
+    "NvChad/nvim-colorizer.lua", -- Highlight color codes
     config = function()
-      require("colorizer").setup({ "*" }, { names = false })
+      require("colorizer").setup {
+        filetypes = {
+          "typescript",
+          "typescriptreact",
+          "javascript",
+          "javascriptreact",
+          "css",
+          "html",
+          "astro",
+          "lua",
+        },
+        user_default_options = {
+          names = false,
+          tailwind = "both",
+        },
+      }
     end,
   },
   { "p00f/nvim-ts-rainbow" }, -- Rainbow parentheses
   --}}}
 
-  -- Productivity {{{
+  -- Auto-completes {{{
   { "hrsh7th/cmp-cmdline" }, -- cmd-line autocompletes
+  {
+    "roobert/tailwindcss-colorizer-cmp.nvim", -- Tailwind CSS color autocompletes
+    config = function()
+      require("tailwindcss-colorizer-cmp").setup({
+        color_square_width = 2,
+      })
+    end
+  },
+  -- }}}
+
+  -- Productivity {{{
   {
     "kylechui/nvim-surround",
     tag = "*",
