@@ -5,16 +5,6 @@ local cmp = lvim.builtin.cmp
 
 -- Command autocomplete
 cmp.cmdline.enable = true
--- TODO: Remove the following in stable release 1.2
-cmp.cmdline.options[1].sources = {
-  { name = "path" },
-  {
-    name = "cmdline",
-    option = {
-      ignore_cmds = { 'Man', '!' }
-    }
-  }
-}
 
 -- Tailwind CSS colors
 cmp.formatting = {
@@ -59,10 +49,6 @@ lualine.sections.lualine_c = {
 -- NvimTree {{{
 local nvimtree = lvim.builtin.nvimtree
 nvimtree.setup.view.side = "left"
-nvimtree.setup.view.mappings.list = {
-  -- Press "?" for help
-  { key = "?", action = "toggle_help" },
-}
 nvimtree.setup.renderer.icons.show.git = true
 nvimtree.setup.renderer.group_empty = true
 -- }}}
@@ -131,7 +117,7 @@ which_key.mappings.d.name = " Debug"
 which_key.mappings.g.name = " Git"
 which_key.mappings.l.name = " LSP"
 which_key.mappings.L.name = " LunarVim"
-which_key.mappings.p.name = " Packer"
+which_key.mappings.p.name = "󰏗 Plugins"
 which_key.mappings.s.name = " Search"
 which_key.mappings.T.name = " Treesitter"
 -- }}}

@@ -42,7 +42,7 @@ which_key.mappings["g"]["g"] = nil    -- ✕ Lazygit
 which_key.mappings["g"]["o"] = nil    -- ✕ Diff view of all files w/ Telescope
 
 -- LSP
-lvim.keys.normal_mode["<F2>"] = { ":lua vim.lsp.buf.rename()<CR>" }
+lvim.keys.normal_mode["<F2>"] = { ":Lspsaga rename<CR>" }
 lvim.lsp.buffer_mappings.normal_mode['gh'] = { vim.lsp.buf.hover, "Show documentation" }
 lvim.lsp.buffer_mappings.normal_mode['gq'] = {
   ":Lspsaga code_action<CR>",

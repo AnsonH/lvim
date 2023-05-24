@@ -1,7 +1,4 @@
---[[
-- lvim is the global options object.
-- Linters should be filled in as strings with either a global executable or a path to an executable
-]]
+--[[ See https://www.lunarvim.org/docs/configuration ]]--
 
 reload "user.plugins"   -- IMPORTANT: Always load plugins at first line
 reload "user.autocommands"
@@ -17,7 +14,7 @@ vim.opt.iskeyword:append("-")  -- treat dash separated words as a word text obje
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 
--- colorscheme (See ./after/plugin/highlights.lua for custom highlights)
+-- colorscheme (See ./lua/user/highlights.lua for custom highlights)
 -- lvim.colorscheme = "lunar"
 lvim.colorscheme = "sonokai"
 vim.g.sonokai_style = "shusia"

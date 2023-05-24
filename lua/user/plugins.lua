@@ -3,7 +3,11 @@
 
 lvim.plugins = {
   -- Syntax highlighting {{{
-  { "sainnhe/sonokai" },
+  {
+    "sainnhe/sonokai",
+    lazy = false,    -- Load during startup
+    priority = 1000, -- Load before all other start plugins
+  },
   {
     "NvChad/nvim-colorizer.lua", -- Highlight color codes
     config = function()
@@ -29,7 +33,7 @@ lvim.plugins = {
   --}}}
 
   -- Auto-completes {{{
-  { "hrsh7th/cmp-cmdline" }, -- cmd-line autocompletes
+  { "hrsh7th/cmp-cmdline" },                  -- cmd-line autocompletes
   {
     "roobert/tailwindcss-colorizer-cmp.nvim", -- Tailwind CSS color autocompletes
     config = function()
@@ -43,7 +47,6 @@ lvim.plugins = {
   -- Productivity {{{
   {
     "kylechui/nvim-surround",
-    tag = "*",
     config = function()
       require("nvim-surround").setup()
     end,
@@ -56,7 +59,7 @@ lvim.plugins = {
   },
   {
     "sindrets/diffview.nvim", -- VS Code like diff view
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("diffview").setup({
         enhanced_diff_hl = true,
@@ -65,13 +68,19 @@ lvim.plugins = {
   },
   {
     "glepnir/lspsaga.nvim", -- LSP UI
-    branch = "main",
+    event = "LspAttach",
     config = function()
-      require("lspsaga").init_lsp_saga({
-        -- FIXME: These are not overriding the default options
-        max_preview_lines = 15,
+      require("lspsaga").setup({
+        -- TODO: Extract to a separate file
+        rename = {
+          quit = "<Esc>"
+        }
       })
     end,
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" }
+    }
   },
   -- }}}
 
