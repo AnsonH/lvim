@@ -48,6 +48,8 @@ lualine.sections.lualine_c = {
 
 -- NvimTree {{{
 local nvimtree = lvim.builtin.nvimtree
+
+table.insert(nvimtree.setup.filters.custom, ".git")
 nvimtree.setup.view.side = "left"
 nvimtree.setup.renderer.icons.show.git = true
 nvimtree.setup.renderer.group_empty = true
