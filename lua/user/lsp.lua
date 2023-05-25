@@ -1,7 +1,10 @@
 -- vim:foldmethod=marker
 
 -- Formatters & Linters {{{ 
--- https://www.lunarvim.org/docs/languages#lintingformatting
+-- NOTE: Currently Mason does not support ensured_installed, but you can use this plugin:
+-- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
+
+-- https://www.lunarvim.org/docs/configuration/language-features/linting-and-formatting 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "prettier", },
