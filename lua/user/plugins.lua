@@ -4,9 +4,25 @@
 lvim.plugins = {
   -- Syntax highlighting {{{
   {
-    "sainnhe/sonokai",
+    -- "sainnhe/sonokai",
+    "loctvl842/monokai-pro.nvim",
     lazy = false,    -- Load during startup
     priority = 1000, -- Load before all other start plugins
+    config = function()
+      require("monokai-pro").setup {
+        styles = {
+          keyword = { italic = false },
+        },
+        override = function()
+          return {
+            -- FIXME: "@comments" override does not work
+            -- FIXME: Todo comments highlighting no longer working
+
+            ["@keyword"] = { fg = "#ff6188" },
+          }
+        end
+      }
+    end,
   },
   {
     "NvChad/nvim-colorizer.lua", -- Highlight color codes

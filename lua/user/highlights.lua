@@ -1,6 +1,8 @@
 -- Custom highlights
 -- The highlights are applied in `./autocommands.lua` file
 
+-- NOTE: Deprecated. The `monokai-pro.nvim` supports overrides in the setup function
+
 local M = {}
 
 local function highlight(highlights)
