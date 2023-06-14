@@ -4,7 +4,6 @@
 lvim.plugins = {
   -- Syntax highlighting {{{
   {
-    -- "sainnhe/sonokai",
     "loctvl842/monokai-pro.nvim",
     lazy = false,    -- Load during startup
     priority = 1000, -- Load before all other start plugins
@@ -15,9 +14,10 @@ lvim.plugins = {
         },
         override = function()
           return {
-            -- FIXME: Todo comments highlighting no longer working
-
             Comment = { fg = "#939293" },
+            NvimTreeGitNew = { fg = "#c1c0c0" },
+            Search = { fg = "#2d2a2e", bg = "#a9dc76" },
+            Todo = { bg = "#ffd866" },
             Visual = { bg = "#455a60" },
             ["@keyword"] = { fg = "#ff6188" },
           }
@@ -46,7 +46,7 @@ lvim.plugins = {
       }
     end,
   },
-  { "p00f/nvim-ts-rainbow" }, -- Rainbow parentheses
+  { "HiPhish/nvim-ts-rainbow2" }, -- Rainbow parentheses
   --}}}
 
   -- Auto-completes {{{
