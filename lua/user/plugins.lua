@@ -15,9 +15,10 @@ lvim.plugins = {
         },
         override = function()
           return {
-            -- FIXME: "@comments" override does not work
             -- FIXME: Todo comments highlighting no longer working
 
+            Comment = { fg = "#939293" },
+            Visual = { bg = "#455a60" },
             ["@keyword"] = { fg = "#ff6188" },
           }
         end
@@ -87,7 +88,9 @@ lvim.plugins = {
     event = "LspAttach",
     config = function()
       require("lspsaga").setup({
-        -- TODO: Extract to a separate file
+        symbol_in_winbar = {
+          enable = false, -- Avoid conflict with "nvim-navic"
+        },
         rename = {
           quit = "<Esc>"
         }

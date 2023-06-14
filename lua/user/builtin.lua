@@ -12,6 +12,12 @@ cmp.formatting = {
 }
 -- }}}
 
+-- Gitsigns {{{
+local gitsigns = lvim.builtin.gitsigns
+gitsigns.opts.current_line_blame = true
+gitsigns.opts.current_line_blame_opts.delay = 500
+-- }}}
+
 -- Lualine {{{
 local lualine = lvim.builtin.lualine
 local lualine_components = require("lvim.core.lualine.components")
