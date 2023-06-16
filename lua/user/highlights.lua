@@ -30,13 +30,13 @@ local sonokai = {
 
 M.apply_custom_highlights = function()
   if vim.g.colors_name == "sonokai" then
-    highlight {
+    highlight({
       -- GUI
       CursorLine = { bg = sonokai.bg2 },
       DiffChange = { bg = "#5d433b" },
       IndentBlanklineChar = { fg = sonokai.bg3 }, -- indentation guide
       LineNr = { fg = "#727072" },
-      ScrollView = { bg = "#727072" },          -- scroll bar
+      ScrollView = { bg = "#727072" }, -- scroll bar
       Visual = { bg = "#455a60" },
 
       -- Code: General
@@ -49,9 +49,9 @@ M.apply_custom_highlights = function()
       ["@constructor"] = { fg = sonokai.blue },
       ["@parameter"] = { fg = sonokai.orange },
       ["@property"] = { fg = sonokai.fg },
-      ["@text"] = { fg = sonokai.fg },                         -- HTML tag inner text
-      ["@tag.delimiter"] = { fg = sonokai.grey },              -- HTML tag symbol ("<" & ">")
-      ["@tag"] = { fg = sonokai.red },                         -- HTML tag name
+      ["@text"] = { fg = sonokai.fg }, -- HTML tag inner text
+      ["@tag.delimiter"] = { fg = sonokai.grey }, -- HTML tag symbol ("<" & ">")
+      ["@tag"] = { fg = sonokai.red }, -- HTML tag name
       ["@tag.attribute"] = { fg = sonokai.blue, italic = true }, -- HTML tag attribute
 
       -- Diagnostics
@@ -100,11 +100,11 @@ M.apply_custom_highlights = function()
       NvimTreeFolderName = { fg = "#c1c0c0" },
       NvimTreeEmptyFolderName = { fg = "#c1c0c0" },
       NvimTreeOpenedFolderName = { fg = "#c1c0c0" },
-    }
+    })
   end
 
   if vim.g.colors_name == "lunar" then
-    highlight {
+    highlight({
       -- GUI
       CursorLineNr = { fg = "#8f94b0" },
       LineNr = { fg = "#484f6e" },
@@ -112,7 +112,7 @@ M.apply_custom_highlights = function()
       -- Code: General
       Comment = { fg = "#7d8296" },
       ["@comment"] = { fg = "#7d8296" },
-    }
+    })
   end
 end
 

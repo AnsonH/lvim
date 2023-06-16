@@ -1,19 +1,23 @@
 -- vim:foldmethod=marker
 
--- Formatters & Linters {{{ 
+-- Formatters & Linters {{{
 -- NOTE: Currently Mason does not support ensured_installed, but you can use this plugin:
 -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
 
--- https://www.lunarvim.org/docs/configuration/language-features/linting-and-formatting 
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  { command = "prettier", },
-}
+-- https://www.lunarvim.org/docs/configuration/language-features/linting-and-formatting
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+  { command = "prettier" },
+  {
+    name = "stylua",
+    filetypes = { "lua" },
+  },
+})
 
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { command = "eslint_d", },
-}
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+  { command = "eslint_d" },
+})
 -- }}}
 
 ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!

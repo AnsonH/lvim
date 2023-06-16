@@ -8,7 +8,7 @@ cmp.cmdline.enable = true
 
 -- Tailwind CSS colors
 cmp.formatting = {
-  format = require("tailwindcss-colorizer-cmp").formatter
+  format = require("tailwindcss-colorizer-cmp").formatter,
 }
 -- }}}
 

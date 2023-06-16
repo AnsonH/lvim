@@ -1,4 +1,4 @@
---[[ Autocommands (https://www.lunarvim.org/docs/configuration/autocommands) ]]--
+-- Autocommands (https://www.lunarvim.org/docs/configuration/autocommands)
 
 lvim.autocommands = {
   -- Smart relative lines
@@ -11,7 +11,6 @@ lvim.autocommands = {
     {
       desc = "Disable auto comments on new line",
       command = "set fo-=c fo-=r fo-=o",
-    }
+    },
   },
 }
-

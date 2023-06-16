@@ -38,48 +38,50 @@ lvim.keys.normal_mode["<C-q>"] = "<C-w>q"
 -- Git
 which_key.mappings["g"]["d"] = { ":DiffviewOpen<CR>", "Open Git Diff" }
 which_key.mappings["g"]["D"] = { ":DiffviewClose<CR>", "Close Git Diff" }
-which_key.mappings["g"]["g"] = nil    -- ✕ Lazygit
-which_key.mappings["g"]["o"] = nil    -- ✕ Diff view of all files w/ Telescope
+which_key.mappings["g"]["g"] = nil -- ✕ Lazygit
+which_key.mappings["g"]["o"] = nil -- ✕ Diff view of all files w/ Telescope
 
 -- LSP
 lvim.keys.normal_mode["<F2>"] = { ":Lspsaga rename<CR>" }
-lvim.lsp.buffer_mappings.normal_mode['gh'] = { vim.lsp.buf.hover, "Show documentation" }
-lvim.lsp.buffer_mappings.normal_mode['gq'] = {
+lvim.lsp.buffer_mappings.normal_mode["gh"] = { vim.lsp.buf.hover, "Show documentation" }
+lvim.lsp.buffer_mappings.normal_mode["gq"] = {
   ":Lspsaga code_action<CR>",
   "Code action",
 }
-lvim.lsp.buffer_mappings.normal_mode['gr'] = {
+lvim.lsp.buffer_mappings.normal_mode["gr"] = {
   ":Lspsaga lsp_finder<CR>",
   "Go to references",
 }
-lvim.lsp.buffer_mappings.normal_mode['gpd'] = {
+lvim.lsp.buffer_mappings.normal_mode["gpd"] = {
   ":Lspsaga peek_definition<CR>",
-  "Peek definition"
+  "Peek definition",
 }
-which_key.mappings["l"]["c"] = { ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", "Copilot Toggle Inline" }
-which_key.mappings["l"]["a"] = nil    -- ✕ Code actions
-which_key.mappings["l"]["r"] = nil    -- ✕ Rename symbol
+which_key.mappings["l"]["c"] =
+  { ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", "Copilot Toggle Inline" }
+which_key.mappings["l"]["a"] = nil -- ✕ Code actions
+which_key.mappings["l"]["r"] = nil -- ✕ Rename symbol
 
 -- Leader
-which_key.mappings["f"] = { ":lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy())<CR>", "Live Grep" }
-which_key.mappings["c"] = {}     -- ✕ Close buffer
-which_key.mappings["h"] = {}     -- ✕ :noh
-which_key.mappings["w"] = {}     -- ✕ Save
-which_key.mappings["/"] = {}     -- ✕ Toggle line comment
+which_key.mappings["f"] =
+  { ":lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy())<CR>", "Live Grep" }
+which_key.mappings["c"] = {} -- ✕ Close buffer
+which_key.mappings["h"] = {} -- ✕ :noh
+which_key.mappings["w"] = {} -- ✕ Save
+which_key.mappings["/"] = {} -- ✕ Toggle line comment
 
 -- Telescope
-which_key.mappings["s"]["f"] = nil    -- ✕ Find file
-which_key.mappings["s"]["t"] = nil    -- ✕ Live grep
+which_key.mappings["s"]["f"] = nil -- ✕ Find file
+which_key.mappings["s"]["t"] = nil -- ✕ Live grep
 
 -- Treesitter
 which_key.mappings["T"]["i"] = { ":TSHighlightCapturesUnderCursor<CR>", "Info" }
 
 -- Misc
 lvim.keys.normal_mode["<Esc>"] = ":noh<CR>"
-lvim.keys.normal_mode["x"] = '"_x'  -- Without yank
-lvim.keys.normal_mode["zO"] = "zR"  -- Open all folds
-lvim.keys.normal_mode["zC"] = "zM"  -- Close all folds
-lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"  -- Center after scroll
+lvim.keys.normal_mode["x"] = '"_x' -- Without yank
+lvim.keys.normal_mode["zO"] = "zR" -- Open all folds
+lvim.keys.normal_mode["zC"] = "zM" -- Close all folds
+lvim.keys.normal_mode["<C-d>"] = "<C-d>zz" -- Center after scroll
 lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 
 -- }}}
@@ -89,7 +91,7 @@ lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 -- VS Code Editor Actions
 lvim.keys.insert_mode["<C-s>"] = "<Esc>:w<CR>a"
 lvim.keys.insert_mode["<C-z>"] = "<Esc>:u<CR>a"
-lvim.keys.insert_mode["<C-BS>"] = "<C-w>"          -- Ctrl+Backspace to delete word
+lvim.keys.insert_mode["<C-BS>"] = "<C-w>" -- Ctrl+Backspace to delete word
 
 -- }}}
 

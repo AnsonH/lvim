@@ -5,10 +5,10 @@ lvim.plugins = {
   -- Syntax highlighting {{{
   {
     "loctvl842/monokai-pro.nvim",
-    lazy = false,    -- Load during startup
+    lazy = false, -- Load during startup
     priority = 1000, -- Load before all other start plugins
     config = function()
-      require("monokai-pro").setup {
+      require("monokai-pro").setup({
         styles = {
           keyword = { italic = false },
         },
@@ -29,14 +29,14 @@ lvim.plugins = {
             NavicSeparator = { fg = "#939293" },
             NvimTreeGitNew = { fg = "#c1c0c0" },
           }
-        end
-      }
+        end,
+      })
     end,
   },
   {
     "NvChad/nvim-colorizer.lua", -- Highlight color codes
     config = function()
-      require("colorizer").setup {
+      require("colorizer").setup({
         filetypes = {
           "typescript",
           "typescriptreact",
@@ -51,21 +51,21 @@ lvim.plugins = {
           names = false,
           tailwind = "both",
         },
-      }
+      })
     end,
   },
   { "HiPhish/nvim-ts-rainbow2" }, -- Rainbow parentheses
   --}}}
 
   -- Auto-completes {{{
-  { "hrsh7th/cmp-cmdline" },                  -- cmd-line autocompletes
+  { "hrsh7th/cmp-cmdline" }, -- cmd-line autocompletes
   {
     "roobert/tailwindcss-colorizer-cmp.nvim", -- Tailwind CSS color autocompletes
     config = function()
       require("tailwindcss-colorizer-cmp").setup({
         color_square_width = 2,
       })
-    end
+    end,
   },
   -- }}}
 
@@ -100,14 +100,14 @@ lvim.plugins = {
           enable = false, -- Avoid conflict with "nvim-navic"
         },
         rename = {
-          quit = "<Esc>"
-        }
+          quit = "<Esc>",
+        },
       })
     end,
     dependencies = {
       { "nvim-tree/nvim-web-devicons" },
-      { "nvim-treesitter/nvim-treesitter" }
-    }
+      { "nvim-treesitter/nvim-treesitter" },
+    },
   },
   -- }}}
 
@@ -130,7 +130,7 @@ lvim.plugins = {
           },
           filetypes = {
             markdown = true,
-          }
+          },
         })
         require("copilot_cmp").setup()
       end, 100)
@@ -143,9 +143,9 @@ lvim.plugins = {
     "dstein64/nvim-scrollview", -- scroll bar
     config = function()
       require("scrollview").setup({
-        hide_on_intersect = false
+        hide_on_intersect = false,
       })
-    end
+    end,
   },
   -- }}}
 
@@ -154,6 +154,6 @@ lvim.plugins = {
     "nvim-treesitter/playground", -- Treesitter playground
     event = "BufRead",
   },
-  { "wakatime/vim-wakatime" } -- Wakatime
+  { "wakatime/vim-wakatime" }, -- Wakatime
   -- }}}
 }
