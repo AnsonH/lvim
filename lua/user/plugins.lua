@@ -14,12 +14,20 @@ lvim.plugins = {
         },
         override = function()
           return {
-            Comment = { fg = "#939293" },
-            NvimTreeGitNew = { fg = "#c1c0c0" },
+            -- GUI
             Search = { fg = "#2d2a2e", bg = "#a9dc76" },
             Todo = { bg = "#ffd866" },
             Visual = { bg = "#455a60" },
+
+            -- Code
+            Comment = { fg = "#939293" },
             ["@keyword"] = { fg = "#ff6188" },
+
+            -- Plugins
+            DiffviewDiffDelete = { fg = "#5b595c" }, -- Diff char in diffview
+            NavicText = { fg = "#c1c0c0" },
+            NavicSeparator = { fg = "#939293" },
+            NvimTreeGitNew = { fg = "#c1c0c0" },
           }
         end
       }
