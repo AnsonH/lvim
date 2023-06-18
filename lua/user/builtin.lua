@@ -48,7 +48,13 @@ lualine.sections.lualine_a = {
   },
 }
 lualine.sections.lualine_c = {
+  lualine_components.diagnostics,
   lualine_components.python_env,
+}
+lualine.sections.lualine_x = {
+  lualine_components.lsp,
+  lualine_components.spaces,
+  lualine_components.filetype,
 }
 -- }}}
 

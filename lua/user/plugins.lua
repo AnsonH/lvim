@@ -54,7 +54,18 @@ lvim.plugins = {
       })
     end,
   },
-  { "HiPhish/nvim-ts-rainbow2" }, -- Rainbow parentheses
+  {
+    "HiPhish/nvim-ts-rainbow2", -- Rainbow parentheses
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        rainbow = {
+          query = {
+            "rainbow-parens",
+          },
+        },
+      })
+    end,
+  },
   --}}}
 
   -- Auto-completes {{{
