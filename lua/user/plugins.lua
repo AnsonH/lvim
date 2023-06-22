@@ -7,31 +7,7 @@ lvim.plugins = {
     "loctvl842/monokai-pro.nvim",
     lazy = false, -- Load during startup
     priority = 1000, -- Load before all other start plugins
-    config = function()
-      require("monokai-pro").setup({
-        styles = {
-          keyword = { italic = false },
-        },
-        override = function()
-          return {
-            -- GUI
-            Search = { fg = "#2d2a2e", bg = "#a9dc76" },
-            Todo = { bg = "#ffd866" },
-            Visual = { bg = "#455a60" },
-
-            -- Code
-            Comment = { fg = "#939293" },
-            ["@keyword"] = { fg = "#ff6188" },
-
-            -- Plugins
-            DiffviewDiffDelete = { fg = "#5b595c" }, -- Diff char in diffview
-            NavicText = { fg = "#c1c0c0" },
-            NavicSeparator = { fg = "#939293" },
-            NvimTreeGitNew = { fg = "#c1c0c0" },
-          }
-        end,
-      })
-    end,
+    config = require("user.highlights").monokai_pro_config,
   },
   {
     "NvChad/nvim-colorizer.lua", -- Highlight color codes
