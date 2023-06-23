@@ -128,10 +128,10 @@ treesitter.ensure_installed = {
 -- NOTE: whichkey keybindings are found in 'keymaps.lua'
 local which_key = lvim.builtin.which_key
 which_key.setup.icons.group = ""
-which_key.mappings.b.name = "﬘ Buffers"
+which_key.mappings.b.name = " Buffers"
 which_key.mappings.d.name = " Debug"
 which_key.mappings.g.name = " Git"
-which_key.mappings.l.name = " LSP"
+which_key.mappings.l.name = "󰬴 LSP"
 which_key.mappings.L.name = " LunarVim"
 which_key.mappings.p.name = "󰏗 Plugins"
 which_key.mappings.s.name = " Search"
