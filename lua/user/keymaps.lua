@@ -35,6 +35,9 @@ lvim.keys.normal_mode["<S-Right>"] = ":BufferLineMoveNext<CR>"
 lvim.keys.normal_mode["Q"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<C-q>"] = "<C-w>q"
 
+-- Folds
+lvim.builtin.which_key.setup.plugins.presets.z = true
+
 -- Git
 which_key.mappings["g"]["d"] = { ":DiffviewOpen<CR>", "Open Git Diff" }
 which_key.mappings["g"]["D"] = { ":DiffviewClose<CR>", "Close Git Diff" }
