@@ -96,6 +96,10 @@ lvim.plugins = {
       { "nvim-treesitter/nvim-treesitter" },
     },
   },
+  {
+    "christoomey/vim-tmux-navigator", -- Navigate between vim and tmux panes
+    lazy = false,
+  },
   -- }}}
 
   -- GitHub Copilot {{{
@@ -109,7 +113,8 @@ lvim.plugins = {
           suggestion = {
             auto_trigger = true,
             keymap = {
-              accept = "<Tab>",
+              -- NOTE: If accept using <Tab>, cannot use Tab to add indent in edit mode
+              accept = "<A-l>",
               next = "<M-]>",
               prev = "<M-[>",
               dismiss = "<C-]>",

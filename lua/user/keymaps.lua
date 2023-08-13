@@ -28,10 +28,16 @@ lvim.keys.normal_mode["<"] = "<<"
 lvim.keys.normal_mode[">"] = ">>"
 
 -- Buffers & Windows
+lvim.keys.normal_mode["<C-h>"] = ":TmuxNavigateLeft<CR>"
+lvim.keys.normal_mode["<C-j>"] = ":TmuxNavigateDown<CR>"
+lvim.keys.normal_mode["<C-k>"] = ":TmuxNavigateUp<CR>"
+lvim.keys.normal_mode["<C-l>"] = ":TmuxNavigateRight<CR>"
+
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-Left>"] = ":BufferLineMovePrev<CR>"
 lvim.keys.normal_mode["<S-Right>"] = ":BufferLineMoveNext<CR>"
+
 lvim.keys.normal_mode["Q"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<C-q>"] = "<C-w>q"
 
@@ -68,6 +74,7 @@ which_key.mappings["l"]["r"] = nil -- ✕ Rename symbol
 -- Leader
 which_key.mappings["f"] =
   { ":lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy())<CR>", "Live Grep" }
+which_key.mappings["x"] = { ":!chmod +x %<CR>", "Make file executable" }
 which_key.mappings["c"] = {} -- ✕ Close buffer
 which_key.mappings["h"] = {} -- ✕ :noh
 which_key.mappings["w"] = {} -- ✕ Save
