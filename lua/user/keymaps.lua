@@ -39,7 +39,9 @@ lvim.keys.normal_mode["<S-Left>"] = ":BufferLineMovePrev<CR>"
 lvim.keys.normal_mode["<S-Right>"] = ":BufferLineMoveNext<CR>"
 
 lvim.keys.normal_mode["Q"] = ":BufferKill<CR>"
-lvim.keys.normal_mode["<C-q>"] = "<C-w>q"
+lvim.keys.normal_mode["<C-q>"] = "<C-w>q" -- Close split
+lvim.keys.normal_mode["|"] = "<C-w>v" -- Mimic tmux vertical split
+lvim.keys.normal_mode["_"] = "<C-w>s"
 
 -- Folds
 lvim.builtin.which_key.setup.plugins.presets.z = true
