@@ -113,8 +113,7 @@ lvim.plugins = {
           suggestion = {
             auto_trigger = true,
             keymap = {
-              -- NOTE: If accept using <Tab>, cannot use Tab to add indent in edit mode
-              accept = "<A-l>",
+              accept = "<S-Tab>",
               next = "<M-]>",
               prev = "<M-[>",
               dismiss = "<C-]>",
