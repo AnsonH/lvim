@@ -35,6 +35,9 @@ M.monokai_pro_config = function()
         Comment = { fg = monokai_pro.bg4 },
         ["@keyword"] = { fg = monokai_pro.red },
         ["@tag.delimeter"] = { fg = monokai_pro.bg4 },
+        ["@text.literal"] = { fg = monokai_pro.grey },
+        ["@text.reference"] = { fg = monokai_pro.red },
+        ["@text.uri"] = { fg = monokai_pro.green },
         ["@type.builtin"] = { italic = true },
 
         -- Plugins
