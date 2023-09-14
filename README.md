@@ -14,4 +14,3 @@ Targets LunarVim v1.3.
 3. Run `lvim` in the Terminal. Wait for it to compile Treesitter parsers.
 4. Authenticate GitHub Copilot with `:Copilot auth`.
    > **Note** It may take 10~20 secs before Copilot start generating inline suggestions. Be patient!
-5. Authenticate [Wakatime](https://wakatime.com/) with `:WakaTimeApiKey`.

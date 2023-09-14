@@ -145,6 +145,5 @@ lvim.plugins = {
     "nvim-treesitter/playground", -- Treesitter playground
     event = "BufRead",
   },
-  { "wakatime/vim-wakatime" }, -- Wakatime
   -- }}}
 }
