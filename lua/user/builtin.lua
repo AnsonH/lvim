@@ -10,6 +10,9 @@ cmp.cmdline.enable = true
 cmp.formatting = {
   format = require("tailwindcss-colorizer-cmp").formatter,
 }
+
+-- Avoid <S-Tab> clash with Copilot accept suggestion
+cmp.mapping["<S-Tab>"] = nil
 -- }}}
 
 -- Gitsigns {{{
