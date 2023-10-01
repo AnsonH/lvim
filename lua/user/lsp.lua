@@ -1,5 +1,17 @@
 -- vim:foldmethod=marker
 
+-- Language servers {{{
+--- @usage https://github.com/williamboman/mason-lspconfig.nvim#configuration
+local mason_lsp_setup = lvim.lsp.installer.setup
+
+mason_lsp_setup.ensure_installed = {
+  "jsonls",
+  "lua_ls",
+  "tailwindcss",
+  "tsserver",
+}
+-- }}}
+
 -- Formatters & Linters {{{
 -- NOTE: Currently Mason does not support ensured_installed, but you can use this plugin:
 -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
