@@ -2,6 +2,17 @@
 --- Plugins: https://www.lunarvim.org/docs/plugins
 
 lvim.plugins = {
+  -- Package management {{{
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = require("user.lsp").mason_ensured_installed,
+      })
+    end,
+  },
+  -- }}}
+
   -- Syntax highlighting {{{
   {
     "loctvl842/monokai-pro.nvim",

@@ -1,20 +1,31 @@
 -- vim:foldmethod=marker
 
--- Language servers {{{
---- @usage https://github.com/williamboman/mason-lspconfig.nvim#configuration
-local mason_lsp_setup = lvim.lsp.installer.setup
+local M = {}
 
-mason_lsp_setup.ensure_installed = {
+-- List of Mason packages to ensure installation
+--- @see https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
+M.mason_ensured_installed = {
+  -- LSP
+  -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
+  "html",
   "jsonls",
   "lua_ls",
   "tailwindcss",
   "tsserver",
+  "vimls",
+  "yamlls",
+
+  -- Linters
+  "eslint_d",
+  "shellcheck",
+
+  -- Formatters
+  "prettier",
+  "shfmt",
+  "stylua",
 }
--- }}}
 
 -- Formatters & Linters {{{
--- NOTE: Currently Mason does not support ensured_installed, but you can use this plugin:
--- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
 
 -- https://www.lunarvim.org/docs/configuration/language-features/linting-and-formatting
 local formatters = require("lvim.lsp.null-ls.formatters")
@@ -57,3 +68,5 @@ linters.setup({
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
+
+return M
