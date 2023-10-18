@@ -14,3 +14,9 @@ Targets LunarVim v1.3.
 3. Run `lvim` in the Terminal. Wait for it to compile Treesitter parsers.
 4. Authenticate GitHub Copilot with `:Copilot auth`.
    > **Note** It may take 10~20 secs before Copilot start generating inline suggestions. Be patient!
+
+## Screenshots
+
+![demo 1](https://github.com/AnsonH/lvim/assets/57580593/2a2a9c70-b7e0-4849-b60a-2407e7fdde3c)
+
+(Font: [Jetbrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono))
