@@ -21,6 +21,10 @@ local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
   { command = "prettier" },
   {
+    name = "shfmt",
+    filetypes = { "sh" },
+  },
+  {
     name = "stylua",
     filetypes = { "lua" },
   },
