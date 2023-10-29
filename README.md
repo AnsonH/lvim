@@ -17,6 +17,6 @@ Targets LunarVim v1.3.
 
 ## Screenshots
 
-![demo 1](https://github.com/AnsonH/lvim/assets/57580593/2a2a9c70-b7e0-4849-b60a-2407e7fdde3c)
+<img width="800" alt="demo 1" src="https://github.com/AnsonH/lvim/assets/57580593/cd650636-871e-4cfc-8e9a-1b2c5bd01027">
 
 (Font: [Jetbrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono))
