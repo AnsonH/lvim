@@ -33,6 +33,7 @@ lvim.plugins = {
           "html",
           "astro",
           "lua",
+          "sh",
         },
         user_default_options = {
           names = false,
