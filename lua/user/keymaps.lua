@@ -49,7 +49,7 @@ lvim.builtin.which_key.setup.plugins.presets.z = true
 -- Git
 which_key.mappings["g"]["d"] = { ":DiffviewOpen<CR>", "Open Git Diff" }
 which_key.mappings["g"]["D"] = { ":DiffviewClose<CR>", "Close Git Diff" }
-which_key.mappings["g"]["g"] = nil -- ✕ Lazygit
+which_key.mappings["g"]["g"] = { ":OpenInGHFileLines<CR>", "Open File From Remote" }
 which_key.mappings["g"]["o"] = nil -- ✕ Diff view of all files w/ Telescope
 
 -- LSP
@@ -116,5 +116,11 @@ lvim.keys.visual_mode["<C-/>"] = ":lua require('Comment.api').toggle.linewise(vi
 
 -- Paste without yanking
 lvim.keys.visual_mode["p"] = '"_dP'
+
+-- Git
+which_key.vmappings["g"] = {
+  name = " Git",
+  g = { ":OpenInGHFileLines<CR>", "Open File From Remote" },
+}
 
 -- }}}
