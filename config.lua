@@ -14,7 +14,10 @@ vim.opt.timeoutlen = 600 -- time in ms for a mapped sequence to complete
 
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.format_on_save.pattern = { "*.lua" }
+lvim.format_on_save.pattern = {
+  "*.lua",
+  "*.{ts,tsx}",
+}
 
 -- colorscheme
 lvim.colorscheme = "monokai-pro"

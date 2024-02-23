@@ -45,6 +45,14 @@ local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
   { command = "eslint_d" },
 })
+
+local code_actions = require("lvim.lsp.null-ls.code_actions")
+code_actions.setup({
+  {
+    exe = "eslint_d",
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
+  },
+})
 -- }}}
 
 ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
