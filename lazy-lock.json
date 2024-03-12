@@ -43,7 +43,7 @@
   "nvim-ts-rainbow2": { "branch": "master", "commit": "f3c70493bb23f83eee7b29aa6043c5caa38d111e" },
   "nvim-web-devicons": { "branch": "master", "commit": "986875b7364095d6535e28bd4aac3a9357e91bbe" },
   "onedarker.nvim": { "branch": "freeze", "commit": "b00dd2189f264c5aeb4cf04c59439655ecd573ec" },
-  "openingh.nvim": { "branch": "main", "commit": "4a0d169e905b082a82f37f7dedddfe044340d443" },
+  "openingh.nvim": { "branch": "main", "commit": "613c18967d42202f3e2a9ac788caf62a402e7c1a" },
   "playground": { "branch": "master", "commit": "2b81a018a49f8e476341dfcb228b7b808baba68b" },
   "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
   "project.nvim": { "branch": "main", "commit": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb" },

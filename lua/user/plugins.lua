@@ -113,9 +113,7 @@ lvim.plugins = {
     lazy = false,
   },
   {
-    -- TODO(Anson): Replace with 'Almo7aya/openingh.nvim' after this PR is merged
-    -- https://github.com/Almo7aya/openingh.nvim/pull/29
-    "AnsonH/openingh.nvim", -- Open in GitHub
+    "Almo7aya/openingh.nvim", -- Open in GitHub
   },
   -- }}}
 
