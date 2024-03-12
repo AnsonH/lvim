@@ -34,6 +34,7 @@ M.monokai_pro_config = function()
         -- Code
         Comment = { fg = monokai_pro.bg4 },
         ["@keyword"] = { fg = monokai_pro.red },
+        ["@string.documentation"] = { fg = monokai_pro.bg4 },
         ["@tag.delimeter"] = { fg = monokai_pro.bg4 },
         ["@text.literal"] = { fg = monokai_pro.grey },
         ["@text.reference"] = { fg = monokai_pro.red },
