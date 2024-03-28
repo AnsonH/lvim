@@ -13,4 +13,14 @@ lvim.autocommands = {
       command = "set fo-=c fo-=r fo-=o",
     },
   },
+  {
+    "BufEnter",
+    {
+      desc = "Disable diagnostics for certain files",
+      pattern = { ".env*" },
+      callback = function(args)
+        vim.diagnostic.disable(args.buf)
+      end,
+    },
+  },
 }
