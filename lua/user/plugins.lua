@@ -91,7 +91,7 @@ lvim.plugins = {
     end,
   },
   {
-    "glepnir/lspsaga.nvim", -- LSP UI
+    "nvimdev/lspsaga.nvim", -- LSP UI
     event = "LspAttach",
     config = function()
       require("lspsaga").setup({
