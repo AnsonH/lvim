@@ -2,7 +2,7 @@
 
 My [LunarVim](https://www.lunarvim.org/) configuration.
 
-Targets LunarVim v1.3.
+Targets LunarVim v1.4.
 
 ## Initial Set-Up
 
