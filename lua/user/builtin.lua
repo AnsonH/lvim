@@ -73,6 +73,11 @@ nvimtree.setup.renderer.group_empty = true
 -- Telescope {{{
 local telescope = lvim.builtin.telescope
 local _, actions = pcall(require, "telescope.actions")
+telescope.defaults.file_ignore_patterns = {
+  "build",
+  "dist",
+  "node_modules",
+}
 telescope.defaults.mappings = {
   -- input mode
   i = {

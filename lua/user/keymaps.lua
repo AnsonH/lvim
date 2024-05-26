@@ -86,6 +86,10 @@ which_key.mappings["w"] = {} -- ✕ Save
 which_key.mappings["/"] = {} -- ✕ Toggle line comment
 
 -- Telescope
+which_key.mappings["s"]["s"] = {
+  ":Telescope lsp_dynamic_workspace_symbols<CR>",
+  "Workspace Symbols",
+}
 which_key.mappings["s"]["f"] = nil -- ✕ Find file
 which_key.mappings["s"]["t"] = nil -- ✕ Live grep
 
